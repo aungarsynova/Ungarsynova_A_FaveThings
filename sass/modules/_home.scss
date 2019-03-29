@@ -3,21 +3,21 @@
 html { position: relative; min-height: 100%; }
 
 body { 
-    background: url(/images/dark-honeycomb.png) repeat $bg-color; 
+    background: $bg-color; 
     color: $text-color; 
     font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     margin-bottom: 50px;
 }
 
 h1, h2, h3, h4, h5, h6 { 
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Trocchi', serif;
 }
 
 header { background-color: $bg-color; }
 
 nav {
-    a { float: right; }
+    a { float: right; color: $netflix; }
     h1 { 
         font-size: 2rem;
         padding: 8px 20px;
@@ -25,13 +25,13 @@ nav {
     }
 
     a { font-size: 1.75rem; padding: 10px 20px 0 0; }
-    a:hover { color: rgb(101, 184, 108); }
+    a:hover { color: black; }
 }
 
 main { padding: 12px 20px; }
 
 footer { 
-    background-color: $bg-color; 
+    background-color: white; 
     position: absolute; 
     bottom: 0; 
     width: 100%; 
@@ -43,32 +43,25 @@ footer {
 #heroes { text-align: center; margin-top: 20px; }
 
 .hero-container { 
-    border-radius: 1rem; 
+    // border-radius: 1rem; 
     overflow: hidden; 
     display: inline-block; 
     text-align: center;
-    margin: 0 12px 20px;
     border: 2px solid white;
-    background: $bg-color;
-
+    background: white;
+    border-radius: 7px 7px 7px 7px;
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+   
+    
     img { width: 100%; }
 
-    h3 { font-size: 1.5rem; padding: 8px;}
+    h3 { font-size: 1.5rem; padding: 8px; 
+        font-family: 'Trocchi', serif;}
 }
 
-.hero-container:last-of-type { margin-bottom: 120px; }
 
-.marvel-logo { 
-    width: 200px; 
-    position: absolute; 
-    bottom: 40px; 
-    z-index: -1; 
-    left: 0; 
-    right: 0; 
-    display: block;
-    margin: 0 auto;
-}
 
-@media screen and (min-width: 1032px) {
-    .hero-container:last-of-type { margin-bottom: 20px; }
-}
+
+

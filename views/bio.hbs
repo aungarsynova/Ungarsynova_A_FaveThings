@@ -1,4 +1,18 @@
-<h1>Welcome tp {{bioData.name}}'s bio page</h1>
-<img src="/images/{{bioData.avatar}}" alt="bio image">
+<div class="wrapper">
+
+<div class="bioImg"><img src="/images/{{bioData.avatar}}" alt="bio image">
+</div>
+
+<div class="bioInfo">
 <h3>About {{bioData.name}}</h3>
 <p>{{bioData.bio}}</p>
+
+<div class="btn">
+<button type="button" onclick="handleRedirect()">Watch on Netflix</button>
+{{!-- <a href= type="button" role="button"><button type="button">Watch on Netflix</button></a> --}}
+</div>
+</div>
+
+
+
+</div>

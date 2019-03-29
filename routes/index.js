@@ -1,6 +1,7 @@
 var express = require('express');
 var connect = require('../utils/sqlConnect');
 var router = express.Router();
+const targetBaseUrl = 'http://www.netflix.ca/';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -29,8 +30,22 @@ router.get('/:hero', function(req, res, next) {
       res.render('bio', { bioData: result[0] });
     }
   });
+  
   // res.render('index', { title: 'Express' });
 });
+
+
+//Tried to redirect to a show specific netflix page when on click and it is impossible to do in express
+//Tried to redirect to just Netflix http, didn't work either
+
+// function handleRedirect(req, res) {
+//   const targetUrl = targetBaseUrl + req.originalUrl;
+//   res.redirect(targetUrl);
+// }
+// router.get('*', handleRedirect);
+
+
+
 
 
 module.exports = router;
